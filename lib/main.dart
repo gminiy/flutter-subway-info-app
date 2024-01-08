@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_subway_info_app/di/di_setup.dart';
 
 void main() {
-  runApp(const MyApp());
+  diSetup();
+  runApp(const SubwayInfoApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SubwayInfoApp extends StatelessWidget {
+  const SubwayInfoApp({super.key});
 
   // This widget is the root of your application.
   @override
