@@ -9,7 +9,7 @@ class QuerySubwayInfoUseCase {
     required SubwayInfoRepository subwayInfoRepository,
   }) : _subwayInfoRepository = subwayInfoRepository;
 
-  Future<Result<List<SubwayInfoModel>>> querySubwayInfo(String station) async {
+  Future<Result<List<SubwayInfoModel>>> excute(String station) async {
     try {
       final List<SubwayInfoModel> subwayInfoList =
           await _subwayInfoRepository.querySubwayInfo(station);
