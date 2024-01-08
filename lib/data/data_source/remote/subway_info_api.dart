@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
 
-abstract interface class SubwayInfoApi<E> {
+abstract interface class SubwayInfoApi {
   Future<Response> querySubwayInfo(String station);
 }
