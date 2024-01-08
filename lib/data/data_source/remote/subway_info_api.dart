@@ -1,3 +1,5 @@
+import 'package:dio/dio.dart';
+
 abstract interface class SubwayInfoApi<E> {
-  Future<E> querySubwayInfo(String station);
+  Future<Response> querySubwayInfo(String station);
 }
