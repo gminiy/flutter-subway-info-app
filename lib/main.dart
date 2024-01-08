@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_subway_info_app/di/di_setup.dart';
+import 'package:flutter_subway_info_app/router.dart';
 
 void main() {
   diSetup();
@@ -12,7 +13,8 @@ class SubwayInfoApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: router,
       title: '지하철 정보',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
