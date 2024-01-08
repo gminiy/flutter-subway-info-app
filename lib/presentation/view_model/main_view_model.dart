@@ -15,6 +15,15 @@ class MainViewModel extends ChangeNotifier {
   }) : _querySubwayInfoUseCase = querySubwayInfoUseCase;
 
   Future querySubwayInfo(String station) async {
+    if (station == '') {
+      _state = state.copyWith(
+        isLoading: false,
+        subwayInfoModels: [],
+      );
+      notifyListeners();
+
+      return;
+    }
     _state = state.copyWith(
       isLoading: true,
     );
