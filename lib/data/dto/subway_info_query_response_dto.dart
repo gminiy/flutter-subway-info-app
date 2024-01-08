@@ -1,9 +1,9 @@
-class QuerySubwayInfoResponseDto {
-  QuerySubwayInfoResponseDto({
+class SubwayInfoQueryResponseDto {
+  SubwayInfoQueryResponseDto({
       this.errorMessage, 
       this.realtimeArrivalList,});
 
-  QuerySubwayInfoResponseDto.fromJson(dynamic json) {
+  SubwayInfoQueryResponseDto.fromJson(dynamic json) {
     errorMessage = json['errorMessage'] != null ? ErrorMessage.fromJson(json['errorMessage']) : null;
     if (json['realtimeArrivalList'] != null) {
       realtimeArrivalList = [];

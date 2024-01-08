@@ -1,4 +1,4 @@
-import 'package:flutter_subway_info_app/data/dto/query_subway_info_response_dto.dart';
+import 'package:flutter_subway_info_app/data/dto/subway_info_query_response_dto.dart';
 import 'package:flutter_subway_info_app/domain/model/subway_info_model.dart';
 
 extension RealtimeArrivalToSubwayInfo on RealtimeArrival {
