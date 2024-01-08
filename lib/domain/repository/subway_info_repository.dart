@@ -1,6 +1,5 @@
-import 'package:flutter_subway_info_app/core/result.dart';
 import 'package:flutter_subway_info_app/domain/model/subway_info_model.dart';
 
 abstract interface class SubwayInfoRepository {
-  Future<Result<List<SubwayInfoModel>>> querySubwayInfo(String station);
+  Future<List<SubwayInfoModel>> querySubwayInfo(String station);
 }
