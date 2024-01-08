@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_subway_info_app/presentation/view_model/main_state.dart';
 import 'package:flutter_subway_info_app/presentation/view_model/main_view_model.dart';
+import 'package:flutter_subway_info_app/ui/widget/common/subway_info_widget.dart';
 import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {
@@ -42,7 +43,9 @@ class _MainScreenState extends State<MainScreen> {
                       child: ListView.builder(
                         itemCount: state.subwayInfoModels.length,
                         itemBuilder: (context, index) {
-                          return Text(state.subwayInfoModels[index].toString());
+                          // return Text(state.subwayInfoModels[index].toString());
+                          return SubwayInfoWidget(
+                              subwayInfoModel: state.subwayInfoModels[index]);
                         },
                       ),
                     )
