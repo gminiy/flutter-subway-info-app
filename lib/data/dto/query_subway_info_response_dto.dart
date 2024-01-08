@@ -8,12 +8,12 @@ class QuerySubwayInfoResponseDto {
     if (json['realtimeArrivalList'] != null) {
       realtimeArrivalList = [];
       json['realtimeArrivalList'].forEach((v) {
-        realtimeArrivalList?.add(RealtimeArrivalList.fromJson(v));
+        realtimeArrivalList?.add(RealtimeArrival.fromJson(v));
       });
     }
   }
   ErrorMessage? errorMessage;
-  List<RealtimeArrivalList>? realtimeArrivalList;
+  List<RealtimeArrival>? realtimeArrivalList;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -28,8 +28,8 @@ class QuerySubwayInfoResponseDto {
 
 }
 
-class RealtimeArrivalList {
-  RealtimeArrivalList({
+class RealtimeArrival {
+  RealtimeArrival({
       this.beginRow, 
       this.endRow, 
       this.curPage, 
@@ -61,7 +61,7 @@ class RealtimeArrivalList {
       this.arvlMsg3, 
       this.arvlCd,});
 
-  RealtimeArrivalList.fromJson(dynamic json) {
+  RealtimeArrival.fromJson(dynamic json) {
     beginRow = json['beginRow'];
     endRow = json['endRow'];
     curPage = json['curPage'];
