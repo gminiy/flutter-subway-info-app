@@ -12,7 +12,7 @@ class SubwayInfoModel with _$SubwayInfoModel {
     required String direction,
     required String trainType,
     required String finalDestination,
-    required String arrivalTime,
+    required int secondsUntilArrival,
     required String trainStatusMessage,
   }) = _SubwayInfoModel;
 

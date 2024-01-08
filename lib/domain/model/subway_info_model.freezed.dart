@@ -24,7 +24,7 @@ mixin _$SubwayInfoModel {
   String get direction => throw _privateConstructorUsedError;
   String get trainType => throw _privateConstructorUsedError;
   String get finalDestination => throw _privateConstructorUsedError;
-  String get arrivalTime => throw _privateConstructorUsedError;
+  int get secondsUntilArrival => throw _privateConstructorUsedError;
   String get trainStatusMessage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -44,7 +44,7 @@ abstract class $SubwayInfoModelCopyWith<$Res> {
       String direction,
       String trainType,
       String finalDestination,
-      String arrivalTime,
+      int secondsUntilArrival,
       String trainStatusMessage});
 }
 
@@ -65,7 +65,7 @@ class _$SubwayInfoModelCopyWithImpl<$Res, $Val extends SubwayInfoModel>
     Object? direction = null,
     Object? trainType = null,
     Object? finalDestination = null,
-    Object? arrivalTime = null,
+    Object? secondsUntilArrival = null,
     Object? trainStatusMessage = null,
   }) {
     return _then(_value.copyWith(
@@ -85,10 +85,10 @@ class _$SubwayInfoModelCopyWithImpl<$Res, $Val extends SubwayInfoModel>
           ? _value.finalDestination
           : finalDestination // ignore: cast_nullable_to_non_nullable
               as String,
-      arrivalTime: null == arrivalTime
-          ? _value.arrivalTime
-          : arrivalTime // ignore: cast_nullable_to_non_nullable
-              as String,
+      secondsUntilArrival: null == secondsUntilArrival
+          ? _value.secondsUntilArrival
+          : secondsUntilArrival // ignore: cast_nullable_to_non_nullable
+              as int,
       trainStatusMessage: null == trainStatusMessage
           ? _value.trainStatusMessage
           : trainStatusMessage // ignore: cast_nullable_to_non_nullable
@@ -110,7 +110,7 @@ abstract class _$$SubwayInfoModelImplCopyWith<$Res>
       String direction,
       String trainType,
       String finalDestination,
-      String arrivalTime,
+      int secondsUntilArrival,
       String trainStatusMessage});
 }
 
@@ -129,7 +129,7 @@ class __$$SubwayInfoModelImplCopyWithImpl<$Res>
     Object? direction = null,
     Object? trainType = null,
     Object? finalDestination = null,
-    Object? arrivalTime = null,
+    Object? secondsUntilArrival = null,
     Object? trainStatusMessage = null,
   }) {
     return _then(_$SubwayInfoModelImpl(
@@ -149,10 +149,10 @@ class __$$SubwayInfoModelImplCopyWithImpl<$Res>
           ? _value.finalDestination
           : finalDestination // ignore: cast_nullable_to_non_nullable
               as String,
-      arrivalTime: null == arrivalTime
-          ? _value.arrivalTime
-          : arrivalTime // ignore: cast_nullable_to_non_nullable
-              as String,
+      secondsUntilArrival: null == secondsUntilArrival
+          ? _value.secondsUntilArrival
+          : secondsUntilArrival // ignore: cast_nullable_to_non_nullable
+              as int,
       trainStatusMessage: null == trainStatusMessage
           ? _value.trainStatusMessage
           : trainStatusMessage // ignore: cast_nullable_to_non_nullable
@@ -171,7 +171,7 @@ class _$SubwayInfoModelImpl
       required this.direction,
       required this.trainType,
       required this.finalDestination,
-      required this.arrivalTime,
+      required this.secondsUntilArrival,
       required this.trainStatusMessage});
 
   factory _$SubwayInfoModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -186,13 +186,13 @@ class _$SubwayInfoModelImpl
   @override
   final String finalDestination;
   @override
-  final String arrivalTime;
+  final int secondsUntilArrival;
   @override
   final String trainStatusMessage;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'SubwayInfoModel(station: $station, direction: $direction, trainType: $trainType, finalDestination: $finalDestination, arrivalTime: $arrivalTime, trainStatusMessage: $trainStatusMessage)';
+    return 'SubwayInfoModel(station: $station, direction: $direction, trainType: $trainType, finalDestination: $finalDestination, secondsUntilArrival: $secondsUntilArrival, trainStatusMessage: $trainStatusMessage)';
   }
 
   @override
@@ -204,7 +204,7 @@ class _$SubwayInfoModelImpl
       ..add(DiagnosticsProperty('direction', direction))
       ..add(DiagnosticsProperty('trainType', trainType))
       ..add(DiagnosticsProperty('finalDestination', finalDestination))
-      ..add(DiagnosticsProperty('arrivalTime', arrivalTime))
+      ..add(DiagnosticsProperty('secondsUntilArrival', secondsUntilArrival))
       ..add(DiagnosticsProperty('trainStatusMessage', trainStatusMessage));
   }
 
@@ -220,8 +220,8 @@ class _$SubwayInfoModelImpl
                 other.trainType == trainType) &&
             (identical(other.finalDestination, finalDestination) ||
                 other.finalDestination == finalDestination) &&
-            (identical(other.arrivalTime, arrivalTime) ||
-                other.arrivalTime == arrivalTime) &&
+            (identical(other.secondsUntilArrival, secondsUntilArrival) ||
+                other.secondsUntilArrival == secondsUntilArrival) &&
             (identical(other.trainStatusMessage, trainStatusMessage) ||
                 other.trainStatusMessage == trainStatusMessage));
   }
@@ -229,7 +229,7 @@ class _$SubwayInfoModelImpl
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, station, direction, trainType,
-      finalDestination, arrivalTime, trainStatusMessage);
+      finalDestination, secondsUntilArrival, trainStatusMessage);
 
   @JsonKey(ignore: true)
   @override
@@ -252,7 +252,7 @@ abstract class _SubwayInfoModel implements SubwayInfoModel {
       required final String direction,
       required final String trainType,
       required final String finalDestination,
-      required final String arrivalTime,
+      required final int secondsUntilArrival,
       required final String trainStatusMessage}) = _$SubwayInfoModelImpl;
 
   factory _SubwayInfoModel.fromJson(Map<String, dynamic> json) =
@@ -267,7 +267,7 @@ abstract class _SubwayInfoModel implements SubwayInfoModel {
   @override
   String get finalDestination;
   @override
-  String get arrivalTime;
+  int get secondsUntilArrival;
   @override
   String get trainStatusMessage;
   @override

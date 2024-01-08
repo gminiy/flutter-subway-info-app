@@ -13,7 +13,7 @@ _$SubwayInfoModelImpl _$$SubwayInfoModelImplFromJson(
       direction: json['direction'] as String,
       trainType: json['trainType'] as String,
       finalDestination: json['finalDestination'] as String,
-      arrivalTime: json['arrivalTime'] as String,
+      secondsUntilArrival: json['secondsUntilArrival'] as int,
       trainStatusMessage: json['trainStatusMessage'] as String,
     );
 
@@ -24,6 +24,6 @@ Map<String, dynamic> _$$SubwayInfoModelImplToJson(
       'direction': instance.direction,
       'trainType': instance.trainType,
       'finalDestination': instance.finalDestination,
-      'arrivalTime': instance.arrivalTime,
+      'secondsUntilArrival': instance.secondsUntilArrival,
       'trainStatusMessage': instance.trainStatusMessage,
     };
